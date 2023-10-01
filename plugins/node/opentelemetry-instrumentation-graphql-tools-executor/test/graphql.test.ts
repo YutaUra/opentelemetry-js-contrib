@@ -921,7 +921,8 @@ describe('graphql', () => {
         if (Symbol.asyncIterator in mayBeAsyncIterableResult) {
           throw new Error('Expected a synchronous result');
         }
-        graphqlResult = mayBeAsyncIterableResult;
+        graphqlResult =
+          mayBeAsyncIterableResult as graphqlTypes.ExecutionResult<any, any>;
         spans = exporter.getFinishedSpans();
       });
 
@@ -951,7 +952,8 @@ describe('graphql', () => {
         if (Symbol.asyncIterator in mayBeAsyncIterableResult) {
           throw new Error('Expected a synchronous result');
         }
-        graphqlResult = mayBeAsyncIterableResult;
+        graphqlResult =
+          mayBeAsyncIterableResult as graphqlTypes.ExecutionResult<any, any>;
         spans = exporter.getFinishedSpans();
       });
 
@@ -975,7 +977,8 @@ describe('graphql', () => {
         if (Symbol.asyncIterator in mayBeAsyncIterableResult) {
           throw new Error('Expected a synchronous result');
         }
-        graphqlResult = mayBeAsyncIterableResult;
+        graphqlResult =
+          mayBeAsyncIterableResult as graphqlTypes.ExecutionResult<any, any>;
         spans = exporter.getFinishedSpans();
       });
 

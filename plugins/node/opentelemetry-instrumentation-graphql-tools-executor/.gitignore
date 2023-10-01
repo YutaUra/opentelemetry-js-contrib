@@ -1,2 +1,3 @@
 # Dependency directories
 !test/instrumentation/node_modules
+!build
